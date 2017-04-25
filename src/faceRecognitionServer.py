@@ -41,7 +41,7 @@ class faceRecognitionServer:
 									else:
 										clientSocket.send('false\n'.encode('utf-8'))
 								elif request['action'] == 'test':
-									clientSocket.send('Test okay.'.encode('utf-8'))
+									clientSocket.send('Test okay.\n'.encode('utf-8'))
 							except BaseException as e:
 								print("Uknown error")
 								print(e)
