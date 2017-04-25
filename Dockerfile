@@ -15,4 +15,6 @@ RUN pip3 install face_recognition --user
 
 RUN mkdir -m 770 -p /application/resources
 
-COPY ./src/* /application
+COPY ./src/ /application
+
+EXPOSE 4000

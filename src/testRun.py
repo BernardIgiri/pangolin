@@ -13,3 +13,7 @@ unknown_encoding = face_recognition.face_encodings(unknown_picture)[0];
 results = face_recognition.compare_faces([known_encoding], unknown_encoding);
 
 print("Is the face known? {}".format(results[0]))
+
+
+# {"action":"compare","known":"/resources/faces/known/barack-obama.jpg","unknown":"/resources/faces/unknown/President_Barack_Obama.jpg"}
+# {"action":"compare","known":"/resources/faces/known/barack-obama.jpg","unknown":"/resources/faces/unknown/Official_portrait_of_Vice_President_Joe_Biden.jpg"}
