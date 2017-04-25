@@ -41,4 +41,3 @@ core = faceRecognitionServer.faceRecognitionServer(
 	int(options.connections),
 	options.rootDir)
 core.run()
-core.close();
