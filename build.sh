@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t pangolin .
+docker build -t pangolin faceRecognitionServer/
