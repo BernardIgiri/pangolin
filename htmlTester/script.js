@@ -1,14 +1,14 @@
 (function($){
 	$(function() {
 		$('form').on('submit', function() {
-			var known = $('.known').val(),
-				unknown = $('.unknown').val();
+			var faceA = $('.faceA').val(),
+				faceB = $('.faceB').val();
 			$.post({
 				url: "http://localhost:8080",
 				type: 'json',
 				data: {
-					known: known,
-					unknown: unknown
+					faceA: faceA,
+					faceB: faceB
 				},
 				success: function(results) {
 					$('.results').text(

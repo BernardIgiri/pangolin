@@ -4,10 +4,10 @@ import os
 class faceRecognizer:
 	def __init__(self, rootDir):
 		self.rootDir = rootDir
-	def isMatch(self, knownFacePath, unknownFacePath):
-		knownPicture = face_recognition.load_image_file(self.rootDir + knownFacePath)
-		unknownPicture = face_recognition.load_image_file(self.rootDir + unknownFacePath)
-		knownEncoding = face_recognition.face_encodings(knownPicture)[0]
-		unknownEncoding = face_recognition.face_encodings(unknownPicture)[0]
-		results = face_recognition.compare_faces([knownEncoding], unknownEncoding)
+	def isMatch(self, faceAPath, faceBPath):
+		faceAImage = face_recognition.load_image_file(self.rootDir + faceAPath)
+		faceBImage = face_recognition.load_image_file(self.rootDir + faceBPath)
+		faceAEncoding = face_recognition.face_encodings(faceAImage)[0]
+		faceBEncoding = face_recognition.face_encodings(faceBImage)[0]
+		results = face_recognition.compare_faces([faceAEncoding], faceBEncoding)
 		return results[0]
