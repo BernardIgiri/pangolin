@@ -17,13 +17,14 @@ class faceRecognitionServer:
 								isOpen = False
 								print("Client {0[0]}:{0[1]} disconnected.".format(self.client_address))
 								self.request.sendall("Goodbye.\n".encode('utf-8'))
-							elif request['action'] == 'exit':
+							elif request['action'] == 'shutdown':
 								isOpen = False
 								print("Client {0[0]}:{0[1]} requesting shutdown.".format(self.client_address))
 								self.request.sendall('Shutting down...\n'.encode('utf-8'))
 								runner.exit()
 							elif request['action'] == 'compare':
 								isOpen = False
+								print(request)
 								if runner.faceRecognizer.isMatch(request['faceA'], request['faceB']):
 									self.request.sendall('true\n'.encode('utf-8'))
 								else:
