@@ -24,7 +24,6 @@ class faceRecognitionServer:
 								runner.exit()
 							elif request['action'] == 'compare':
 								isOpen = False
-								print(request)
 								if runner.faceRecognizer.isMatch(request['faceA'], request['faceB']):
 									self.request.sendall('true\n'.encode('utf-8'))
 								else:
