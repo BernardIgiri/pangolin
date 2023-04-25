@@ -1,5 +1,7 @@
 # Project Pangolin
 
+Tech Demo of face recognition login system using Python, Go, and Docker.
+
 ## Pre-requisits
 Install Docker
 
